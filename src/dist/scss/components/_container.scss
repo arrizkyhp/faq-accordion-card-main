@@ -1,0 +1,24 @@
+@use '../utilities' as *;
+
+.container {
+  background: $white;
+  position: relative;
+  width: 100vw;
+  max-width: rem(930);
+  display: flex;
+  border-radius: rem(20);
+  box-shadow: 0 40px 40px -10px rgba($color: $very-dark-desaturated-blue, $alpha: 0.5);
+
+  background: $white url(assets/images/bg-pattern-desktop.svg) no-repeat;
+  background-position: rem(-580) rem(-300);
+
+  @include breakpoint-max(small) {
+    flex-direction: column;
+    width: rem(330);
+    margin-top: rem(120);
+    margin-bottom: rem(80);
+
+    background: $white url(assets/images/bg-pattern-mobile.svg) no-repeat;
+    background-position: rem(40) rem(-5);
+  }
+}

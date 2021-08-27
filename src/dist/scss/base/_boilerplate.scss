@@ -1,0 +1,29 @@
+@use '../utilities' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: $font-kumbh-sans;
+}
+
+body {
+  @include centering();
+  background: linear-gradient(180deg, $soft-violet, $soft-blue) no-repeat;
+  min-height: 100vh;
+  display: grid;
+  font-size: rem(12);
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint-max(small) {
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,40 @@
+@use '../utilities' as *;
+
+.illustration {
+  width: 100%;
+  position: relative;
+
+  &__desktop {
+    &__box {
+      position: absolute;
+      left: rem(-95);
+      top: rem(195);
+      z-index: 9999;
+    }
+
+    &__woman {
+      position: absolute;
+      top: rem(60);
+      left: rem(-85);
+      z-index: 999;
+      clip-path: inset(0 0 0 rem(85));
+    }
+
+    @include breakpoint-max(small) {
+      visibility: hidden;
+    }
+  }
+
+  &__mobile {
+    position: relative;
+    height: rem(90);
+    &__woman {
+      position: absolute;
+      top: rem(-110);
+      left: rem(18);
+    }
+    @include breakpoint-min(small) {
+      visibility: hidden;
+    }
+  }
+}
